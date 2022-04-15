@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'web-security-tutorial';
+  hideSide = true;
+
+
+  hideSideBar(){
+    this.hideSide = !this.hideSide;
+  }
+
 }

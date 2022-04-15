@@ -1,0 +1,15 @@
+<div class="bg-gray-200  border-gray-300 border-b-2  flex flex-col mr-4 cursor-pointer">
+    <div class="p-4 flex justify-between" (click)="hide()">
+        <div>
+            <h1 class="text-black font-bold text-lg"> {{title}}</h1>
+            <h4 class="text-gray-500 text-sm">0/{{numberOfVideo}} |{{time}}</h4>
+        </div>
+        <div class="h-4" [ngStyle]="{'transform': nohide ? 'rotate(0deg)':'rotate(180deg)'}">^</div>
+    </div>
+    <ng-container *ngIf="nohide">
+          <ng-content></ng-content>
+
+    </ng-container>
+
+
+</div>

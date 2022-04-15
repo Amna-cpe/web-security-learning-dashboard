@@ -1,0 +1,86 @@
+<div class="flex flex-col  bg-green-600 ">
+
+  <div>
+
+    <div>
+      <iframe class="w-full " height="415"  [src]="videoUrl | safe" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+
+    {{videoUrl}}
+
+    <div class="bg-white w-full">
+      <div class="mx-6">
+        <div class="flex justify-between">
+          <div></div>
+          <div
+            class="font-bold text-lg text-gray-800  border-b-2 border-black h-12 p-2 cursor-pointer hover:text-gray-500">
+            <a href="#slides">Slides</a>
+          </div>
+
+          <div class="font-bold text-lg text-gray-800 h-12 p-2 cursor-pointer hover:text-gray-500">
+            <a href="#readings"> reading </a>
+          </div>
+          <div class="font-bold text-lg text-gray-800 h-12 p-2 cursor-pointer hover:text-gray-500">
+            <a href="#assignements">Assignments</a>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="w-full  bg-gray-200">
+      <!-- notes / slides / assinments -  -->
+      <div class='flex flex-col items-center justify-center w-full  p-6 relative '>
+        <div class="overflow-x-hidden overflow-y-hidden  scroll-smooth w-96  h-80 ">
+
+          <div id="readings" class="w-96  h-80">
+            <ul class="w-full p-10 ">
+              <li class=" font-semibold text-lg hover:text-blue-600 mb-4" *ngFor="let item of readings">
+                <a [href]="item">{{item}}</a>
+              </li>
+
+            </ul>
+          </div>
+
+
+          <div id="slides" class="w-96  h-80" *ngFor="let item of slides">
+            <ul class="w-full p-10 ">
+              <li class=" font-semibold text-lg hover:text-blue-600">
+                <a [href]="item" target="_blank"> {{item}}</a>
+              </li>
+            </ul>
+          </div>
+
+          <div id="assignements" class="w-96  h-80" *ngFor="let item of assignments">
+            <ul class="w-full p-10 ">
+              <li class=" font-semibold text-lg hover:text-blue-600">
+                <a [href]="item" target="_blank"> {{item}}</a>
+              </li>
+            </ul>
+          </div>
+
+
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- footer -->
+    <footer class="text-white  p-6 ">
+      <div class="text-lg ">
+        This is a website done based on a playlist on youtube the contents are created by
+        feras alfgijdog all <br /> contents are preserved to him
+        <small>designed and developed by Amna J.</small>
+      </div>
+    </footer>
+
+  </div>
+
+
+
+</div>
